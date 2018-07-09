@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const morgan = require('morgan');
 const mongoose = require('mongoose');
 
 // Model imports
@@ -35,7 +36,9 @@ db.once("open", function(callback){ console.log("Connection Successful") });
 
 // Express app config
 const app = express();
+app.use(morgan('combined'));
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 // ------------------------------------------------ Server CRUD API
 
@@ -49,6 +52,7 @@ app.use(bodyParser.json())
   //     })
   //   }).sort({_id:-1})
   // });
+  // -------------------------------------------------------------- articles
 
 app.get('/articles', (req, res) => {
   Article.find({}, articleModel, function (err, articles) {
@@ -58,6 +62,51 @@ app.get('/articles', (req, res) => {
     })
   }).sort({_id:-1})
 });
+
+// Create: Item
+app.post('/articles', (req, res) => {
+  Article.create(function (err) {
+    if (err) { console.log(err); }
+    res.send({
+      title: req.body.title,
+      intro: req.body.intro,
+      success: true,
+      message: 'Article Added Successfully!'
+    })
+  })
+});
+// app.post('/articles', (req, res) => {
+//   // const db = req.db;
+//   const title = req.body.title;
+//   const text = req.body.text;
+//   const subject = req.body.subject;
+//   const reading_time = req.body.reading_time;
+//   const url = req.body.url;
+//   const authors = req.body.authors;
+//   const publisher = req.body.publisher;
+//   const topics = req.body.topics;
+//   const newArticle = new Article({
+//     title: title,
+//     intro: intro,
+//     text: text,
+//     subject: subject,
+//     reading_time: reading_time,
+//     url: url,
+//     authors: authors,
+//     publisher: publisher,
+//     topics: topics
+//   });
+//
+//   newArticle.save(function (err) {
+//     if (err) { console.log(err); }
+//     res.send({
+//       success: true,
+//       message: 'Article Added Successfully!'
+//     })
+//   })
+// });
+
+// -------------------------------------------------------------- books
 
 app.get('/books', (req, res) => {
   Book.find({}, bookModel, function (err, books) {

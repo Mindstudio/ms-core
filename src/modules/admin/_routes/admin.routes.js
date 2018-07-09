@@ -24,22 +24,22 @@ export default [
           },
           {
             name: 'read',
-            path: '/read',
+            path: '/view',
             component: readView
           },
           {
             name: 'read-item',
-            path: '/read/:id',
+            path: '/view/:id',
             component: readItem
           },
           {
             name: 'update',
-            path: '/update',
+            path: '/update/:id',
             component: updateView
           },
           {
             name: 'delete',
-            path: '/delete',
+            path: '/delete:/id',
             component: deleteView
           }
         ]

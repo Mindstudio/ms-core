@@ -46,9 +46,13 @@
                 <button class="text-grey-darker hover:text-grey-lightest bg-grey-lighter hover:bg-green font-medium rounded-sm p-1 no-underline">
                   Publish
                 </button>
-                <button class="text-grey-darker hover:text-grey-lightest bg-grey-lighter hover:bg-orange font-medium rounded-sm p-1 no-underline">
+                <router-link
+                  :to="{ name: 'update', params: { id: item._id } }"
+                  class="text-grey-darker hover:text-grey-lightest bg-grey-lighter hover:bg-orange font-medium rounded-sm p-1 no-underline"
+                  tag="button"
+                >
                   Update
-                </button>
+                </router-link>
                 <button class="text-grey-darker hover:text-grey-lightest bg-grey-lighter hover:bg-red font-medium rounded-sm p-1 no-underline">
                   Delete
                 </button>
