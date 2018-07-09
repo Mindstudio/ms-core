@@ -23,14 +23,7 @@
 </template>
 
 <script>
-import article from '../_models/article.vue'
 import book from '../_models/book.vue'
-import course from '../_models/course.vue'
-import guide from '../_models/guide.vue'
-import podcast from '../_models/podcast.vue'
-import software from '../_models/software.vue'
-import video from '../_models/video.vue'
-import website from '../_models/website.vue'
 
 export default {
   data () {
@@ -42,49 +35,14 @@ export default {
           comp: ''
         },
         {
-          name: 'Article',
-          comp: 'createArticle'
-        },
-        {
           name: 'Book',
           comp: 'createBook'
-        },
-        {
-          name: 'Course',
-          comp: 'createCourse'
-        },
-        {
-          name: 'Guide',
-          comp: 'createGuide'
-        },
-        {
-          name: 'Podcast',
-          comp: 'createPodcast'
-        },
-        {
-          name: 'Software',
-          comp: 'createSoftware'
-        },
-        {
-          name: 'Video',
-          comp: 'createVideo'
-        },
-        {
-          name: 'Website',
-          comp: 'createWebsite'
         }
       ]
     }
   },
   components: {
-    createArticle: article,
-    createBook: book,
-    createCourse: course,
-    createGuide: guide,
-    createPodcast: podcast,
-    createSoftware: software,
-    createVideo: video,
-    createWebsite: website
+    createBook: book
   }
 }
 </script>

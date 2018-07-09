@@ -11,7 +11,7 @@
 export default {
   computed: {
     item () {
-      return this.$store.getters.getArticleById(this.$route.params.id)
+      return this.$store.getters.getBookById(this.$route.params.id)
     }
   }
 }
