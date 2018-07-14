@@ -1,7 +1,7 @@
 <template lang="html">
   <nav class="text-xs">
     <router-link
-      :to="{ name: 'articles' }"
+      :to="{ name: 'books' }"
       class="py-1 no-underline text-grey-dark hover:text-purple-dark tracking-wide mr-4"
       tag="button"
       >Library

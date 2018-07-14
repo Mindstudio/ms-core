@@ -4,11 +4,8 @@
       <div class="w-1/6 py-1">
         <focus-link></focus-link>
       </div>
-      <div class="w-1/2">
+      <div class="w-5/6">
         <focus-menu></focus-menu>
-      </div>
-      <div class="w-1/6 py-1 flex flex-row justify-end">
-        <admin-button></admin-button>
       </div>
     </div>
   </nav>
@@ -17,14 +14,12 @@
 <script>
 import focusLink from '@/components/navs/focusLink'
 import focusMenu from './focusMenu'
-import adminButton from '@/components/buttons/adminButton'
 
 export default {
   name: 'focus-nav',
   components: {
     focusLink,
-    focusMenu,
-    adminButton
+    focusMenu
   }
 }
 </script>

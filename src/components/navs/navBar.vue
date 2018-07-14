@@ -4,9 +4,6 @@
       <div class="w-1/6 py-1">
         <focus-link></focus-link>
       </div>
-      <div class="w-1/6 py-1 flex flex-row justify-end">
-        <admin-button></admin-button>
-      </div>
     </div>
   </nav>
 </template>

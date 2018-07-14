@@ -12,8 +12,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
