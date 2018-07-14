@@ -11,6 +11,9 @@ export default new Vuex.Store({
     books: {}
   },
   getters: {
+    getBookById: (state) => (id) => {
+      return state.books.find(book => book._id === id)
+    }
   },
   actions: {
     load_books: function ({ commit }) {

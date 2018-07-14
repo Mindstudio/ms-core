@@ -4,7 +4,7 @@
       <div class="w-3/4 flex flex-col justify-between p-4 bg-grey-lighter">
         <div class="">
           <h5 class="text-base text-grey-dark font-medium mb-2">
-            #{{ book.subject }}
+            #book.subject
           </h5>
           <h3 class="text-3xl text-grey-darker font-light mb-2">
             {{ book.title }}
@@ -13,10 +13,10 @@
       </div>
       <div class="w-1/4 flex flex-col justify-between border-l p-4 bg-grey-lightest">
         <h4 class="text-lg text-grey-dark leading-normal font-light mb-2">
-          {{ book.intro }}
+          {{ book.summary }}
         </h4>
         <h6 class="text-base text-grey-dark font-medium">
-          {{ book.publisher }}
+          book.publisher
         </h6>
 
       </div>
@@ -26,10 +26,10 @@
         <h4 class="text-xl text-grey-dark font-medium mb-2">
           Review
         </h4>
-        <p class="text-grey leading-normal mb-2">{{ book.text[0] }}</p>
-        <p class="text-grey leading-normal mb-2">{{ book.text[1] }}</p>
-        <p class="text-grey leading-normal mb-2">{{ book.text[2] }}</p>
-        <p class="text-grey leading-normal mb-2">{{ book.text[3] }}</p>
+        <p class="text-grey leading-normal mb-2">book.text[0]</p>
+        <p class="text-grey leading-normal mb-2">book.text[1]</p>
+        <p class="text-grey leading-normal mb-2">book.text[2]</p>
+        <p class="text-grey leading-normal mb-2">book.text[3]</p>
       </div>
       <div class="w-1/4 border-l border-dashed">
         <div class="p-4">
@@ -42,21 +42,21 @@
               <p class="text-sm text-grey-dark">Max: <b>£10.99</b></p>
             </div>
             <p class="text-sm text-grey-dark mb-2">
-              Released: {{ book.year_pub }}
+              Released: book.year_pub
             </p>
             <div class="flex flex-row">
-              <p class="text-sm text-grey mr-2 hover:text-grey-darker"
+              <!-- <p class="text-sm text-grey mr-2 hover:text-grey-darker"
                 v-for="topic in book.topics"
-                :key="topic.id">
-                #{{ topic }}
-              </p>
+                :key="topic.id"> -->
+                #topic
+              <!-- </p> -->
             </div>
           </h4>
         </div>
         <div class="border-t p-4">
           <h4 class="text-base text-grey-darker font-medium">
-            {{ book.authors[0].first_name }}
-            {{ book.authors[0].last_name }}
+            book.authors[0].first_name
+            book.authors[0].last_name
           </h4>
         </div>
       </div>
