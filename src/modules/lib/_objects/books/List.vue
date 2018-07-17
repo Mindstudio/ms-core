@@ -3,7 +3,7 @@
     <div class="p-8">
       <div class="flex flex-row flex-wrap p-6 border border-dashed border-grey-lighter">
         <div class="w-1/4 p-2" v-for="book in books" :key="book._id">
-          <card :book="book"></card>
+          <card :book="book" v-if="book.status === true"></card>
         </div>
       </div>
     </div>
